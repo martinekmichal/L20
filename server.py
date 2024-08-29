@@ -14,7 +14,7 @@ def about():
 
 @app.route("/random")
 def random():
-    
+
     return render_template("random.html")
 
 

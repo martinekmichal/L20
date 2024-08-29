@@ -1,4 +1,5 @@
 from flask import Flask, render_template
+from random import randint
 
 app = Flask(__name__)
 
@@ -14,8 +15,8 @@ def about():
 
 @app.route("/random")
 def random():
-
-    return render_template("random.html")
+    numbers = [randint(1, 101) for i in range(10)]
+    return render_template("random.html", data=numbers)
 
 
 if __name__ == "__main__":
